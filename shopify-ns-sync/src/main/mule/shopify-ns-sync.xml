@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd"></mule>
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="shopify-ns-syncFlow" doc:id="8e2eec2d-7faf-4aac-99fe-e4d309e7aaba" >
+		<http:listener doc:name="Listener" doc:id="9ae57907-0c1d-4b41-b3ff-e8ddba34edcb" config-ref="HTTP_Listener_config" path="tet"/>
+		<logger level="INFO" doc:name="Logger" doc:id="4a028e8e-89b6-450b-aaf1-31f623a024ef" message="-------------"/>
+	</flow>
+</mule>
